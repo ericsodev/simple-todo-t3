@@ -69,9 +69,6 @@ model Todo {
     userId      String
     completed   Boolean   @default(false)
     order       Int       @default(autoincrement())
-
-    @@unique([order, userId])
-    @@index([order(sort: Asc), userId])
 }
 
 model VerificationToken {

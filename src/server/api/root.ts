@@ -1,3 +1,4 @@
+import { todoRouter } from "./routers/todo";
 import { createTRPCRouter } from "./trpc";
 import { exampleRouter } from "./routers/example";
 
@@ -8,6 +9,7 @@ import { exampleRouter } from "./routers/example";
  */
 export const appRouter = createTRPCRouter({
   example: exampleRouter,
+  todo: todoRouter,
 });
 
 // export type definition of API

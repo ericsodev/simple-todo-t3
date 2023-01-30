@@ -10,7 +10,7 @@ import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/800.css";
 import "@fontsource/poppins/900.css";
 
-import { api } from "../utils/api";
+import { trpc } from "../utils/api";
 
 import "../styles/globals.css";
 import { Layout } from "../components/layout";
@@ -28,4 +28,4 @@ const MyApp: AppType<{ session: Session | null }> = ({
   );
 };
 
-export default api.withTRPC(MyApp);
+export default trpc.withTRPC(MyApp);
