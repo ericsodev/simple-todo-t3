@@ -1,3 +1,4 @@
+import { FunnelIcon } from "@heroicons/react/20/solid";
 import { useSession } from "next-auth/react";
 import { trpc } from "../../utils/api";
 import { CreateTodo } from "./CreateTodo";
@@ -18,6 +19,11 @@ const TodoView: React.FC = () => {
         <CreateTodo
           refetchTodo={() => void utils.todo.invalidate()}
         ></CreateTodo>
+        <span className="flex items-center justify-end gap-2">
+          <h2 className="text-right text-sm font-medium text-gray-600">
+            sort by
+          </h2>
+        </span>
         <TodoList></TodoList>
       </section>
     </section>

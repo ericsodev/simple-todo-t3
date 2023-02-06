@@ -28,6 +28,7 @@ export const CreateTodo: React.FC<Props> = ({ refetchTodo }) => {
     refetchTodo();
     setOpen(false);
   };
+  
   return (
     <>
       <button
